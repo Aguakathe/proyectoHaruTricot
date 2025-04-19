@@ -1,0 +1,93 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Estilos del Header */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(222, 181, 238);
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgb(205, 168, 219);
+  }
+  
+  /* Logo + nombre */
+  .logo-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo-contenedor img {
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .logo-contenedor h1 {
+    font-size: 24px;
+    color: #000000;
+  }
+  
+  /* Navbar */
+  .navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: #252525;
+    font-weight: 500;
+    transition: color 0.2s;
+    padding: 5px 0;
+    position: relative; /* necesario para ::after */
+  }
+  
+ /* Línea inferior animada */
+.navbar ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: #a83ecd;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  /* Al pasar el mouse o si tiene clase .active */
+  .navbar ul li a:hover::after,
+  .navbar ul li a.active::after {
+    width: 100%;
+  }
+  
+  /* Redes sociales */
+  .iconosRedes {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .iconosRedes img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+  }
+  
+  .iconosRedes img:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Fin de Estilos del Header*/
