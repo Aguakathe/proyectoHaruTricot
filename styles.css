@@ -40,8 +40,15 @@
     font-size: 24px;
     color: #000000;
   }
+
   
   /* Navbar */
+  .navbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
   .navbar ul {
     display: flex;
     list-style: none;
@@ -75,11 +82,11 @@
     width: 100%;
   }
   
-  /* Redes sociales */
-  .iconosRedes {
-    display: flex;
-    gap: 10px;
-  }
+ /* Redes sociales */
+.iconosRedes {
+  display: flex;
+  gap: 10px;
+}
   
   .iconosRedes img {
     width: 24px;
@@ -91,8 +98,181 @@
     transform: scale(1.2);
   }
   
- /* Fin de Estilos del Header*/
- /*           -----         */
+ /* Botón de menú hamburguesa */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .navbar {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    background-color: rgb(222, 181, 238);
+    position: absolute;
+    top: 70px; /* altura aproximada del header */
+    left: 0;
+    padding: 10px 0;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+  }
+
+  .navbar ul li a {
+    padding: 10px;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .iconosRedes {
+    align-items: center;
+  }
+}
+
+/* Fin del header*/
+/* ------------- */
+
+
+
+ /* Introducción */
+ .introduccion {
+    display: flex; /* Distribuye elementos en fila */
+    flex-wrap: wrap; /* Permite que los elementos bajen si no caben en una sola línea */
+    justify-content: space-between; /* Espacio entre elementos hijos */
+    align-items: flex-start; /* Alinea los elementos al inicio verticalmente */
+    padding: 50px; /* Espacio interno */
+    background-color: #fffafc; /* Color de fondo suave */
+    border: 3px solid #e8c9f0; /* Borde lila */
+    border-radius: 12px; /* Bordes redondeados */
+    gap: 30px; /* Espacio entre elementos */
+    font-family: 'Poppins', sans-serif; /* Fuente estilizada */
+  }
+  
+  /* Estilos del bloque de texto */
+  .introduccion article {
+    flex: 1 1 400px; /* Tamaño flexible mínimo 400px */
+    max-width: 600px; /* No crecer más allá de 600px */
+  }
+  
+  /* Título principal */
+  .introduccion h2 {
+    font-size: 36px;
+    color: #2c2c2c;
+    margin-bottom: 15px;
+  }
+  
+  /* Texto del artículo */
+  .introduccion p {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 10px;
+  }
+  
+  /* Resalta los ítems especiales en color rosado */
+  .introduccion p:nth-child(4),
+  .introduccion p:nth-child(5) {
+    color: #b30086;
+    font-weight: 500;
+  }
+  
+  /* Contenedor de las imágenes */
+  .imagenesSection1 {
+    position: relative; /* Para posicionar la imagen superior */
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Estilo general de las imágenes */
+  .imagenesSection1 img {
+    border-radius: 50%; /* Hace las imágenes redondas */
+    object-fit: cover; /* Asegura que la imagen se recorte bien */
+  }
+  
+  /* Imagen pequeña (ramito) superpuesta */
+  .imagenesSection1 img:first-child {
+    position: absolute;
+    top: -20px; /* Subida respecto al contenedor */
+    left: 40px; /* Hacia la derecha */
+    width: 120px;
+    height: 120px;
+    border: 4px solid white; /* Borde blanco alrededor */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+    z-index: 2; /* Se pone encima de la otra imagen */
+  }
+  
+  /* Imagen principal (pato rana) */
+  .imagenesSection1 img:last-child {
+    width: 300px;
+    height: 300px;
+    border: 4px solid transparent; /* Solo para mantener proporción */
+    z-index: 1; /* Detrás de la imagen pequeña */
+  }
+  
+  /* Contenedor de los botones */
+  .botonesSection1 {
+    flex-basis: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    margin-top: 20px;
+    display: flex;
+    gap: 15px; /* Espacio entre botones */
+  }
+  
+  /* Estilo general para ambos botones */
+  .btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Animación suave al pasar el mouse */
+  }
+  
+  /* Botón "Ordena Ahora" */
+  .btn.ordena {
+    background-color: #e9c4f6;
+    color: #000;
+    border: none;
+  }
+  
+  /* Hover para "Ordena Ahora" */
+  .btn.ordena:hover {
+    background-color: #dca5f0;
+  }
+  
+  /* Botón "Consulta" */
+  .btn.consulta {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    color: #000;
+  }
+  
+  /* Hover para "Consulta" */
+  .btn.consulta:hover {
+    border-color: #aaa;
+  }
+ /* Fin introducción */
 
  
  /*                   -----                */
@@ -127,9 +307,10 @@
  /*                   -----                */
 
 
-  /*              -----              */
-  /*        Sección Productos        */
-  .contenedor-productos {
+/*              -----              */
+/*        Sección Productos        */
+
+.contenedor-productos {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -141,7 +322,7 @@
     background-color: #fbe5fd;
     padding: 1rem;
     border-radius: 1rem;
-    width: 25%;
+    flex-basis: 22%; /* Por defecto, 4 productos por fila */
     box-shadow: 0 2px 8px rgba(151, 89, 163, 0.404);
     text-align: center;
     overflow: hidden;
@@ -181,13 +362,228 @@
     font-weight: bold;
     font-size: 16px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.producto p{
+  }
+  
+  .producto p {
     padding: 5px;
-}
-
-.producto h3 {
+  }
+  
+  .producto h3 {
     padding: 20px;
     text-align: center;
-}
+  
+  /* ----- Media Queries para pantallas pequeñas ----- */
+  }
+  
+  @media (max-width: 1024px) {
+    .producto {
+      flex-basis: 48%; /* 2 productos por fila en pantallas medianas */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .producto {
+      flex-basis: 100%; /* 1 producto por fila en pantallas pequeñas */
+    }
+  
+    .producto img {
+      width: 150px; /* Ajustamos el tamaño de las imágenes */
+      height: 150px;
+    }
+  
+    .precio {
+      font-size: 14px; /* Reducimos el tamaño del precio */
+      padding: 6px 12px;
+    }
+  }
+
+/* ---------------------------- */
+/* Estilos Tu Pedido, Tu Estilo*/
+
+.detallesPedido {
+    padding: 50px 20px;
+    background-color: #fef6ff;
+    text-align: center;
+  }
+  
+  .contenedor-detalles {
+    display: flex; /* Usa Flexbox para ordenar los hijos */
+    flex-wrap: wrap; /* Permite que los bloques bajen si no caben */
+    justify-content: center; /* Centra horizontalmente los bloques */
+    gap: 30px; /* Espacio entre los bloques */
+    margin-top: 80px; /* espacio entre el título y las tarjetas */
+  }
+  
+  .cosas {
+    background-color: #ffffff; /* Fondo blanco para que contraste */
+    padding: 20px; /* Espaciado interno */
+    width: 100%; /* Por defecto ocupa todo el ancho */
+    max-width: 300px; /* Pero no más de 300px */
+    border-radius: 15px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave al hacer hover */
+  }
+  
+  .cosas:hover {
+    transform: translateY(-5px); /* Se eleva un poquito al pasar el mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra más fuerte al hacer hover */
+  }
+  
+  .cosas img {
+    width: 60px; /* Tamaño de la imagen */
+    margin-bottom: 15px; /* Espacio debajo de la imagen */
+  }
+  
+  .cosas h3 {
+    font-size: 20px; /* Tamaño del subtítulo */
+    color: #6c3483; /* Morado oscuro */
+    margin-bottom: 10px; /* Espacio inferior */
+  }
+  
+  .cosas p {
+    font-size: 15px; /* Tamaño del texto */
+    color: #4a4a4a; /* Gris oscuro */
+    margin-bottom: 8px; /* Espacio entre párrafos */
+  }
+
+
+
+  @media (max-width: 768px) {
+    .contenedor-detalles {
+      flex-direction: column; /* En móvil, los bloques se apilan verticalmente */
+      align-items: center; /* Centra los bloques */
+      gap: 20px; /* Menor espacio entre ellos */
+    }
+  
+    .section-title {
+      font-size: 24px; /* Título un poco más pequeño en móvil */
+    }
+  
+    .cosas {
+      width: 90%; /* Bloques más anchos pero sin pegarse a los bordes */
+    }
+  
+    .cosas h3 {
+      font-size: 18px; /* Texto un poco más pequeño para que no abrume */
+    }
+  
+    .cosas p {
+      font-size: 14px; /* Texto más cómodo para leer en celular */
+    }
+  }
+
+  /* Footer */
+  footer {
+    background-color: #e6a8e6; /* Fondo morado pastel */
+    color: #000; /* Texto en negro para buena visibilidad */
+    padding: 40px 20px; /* Espaciado interior */
+    font-family: 'Poppins', sans-serif; /* Fuente amigable y moderna */
+    text-align: center; /* Centrado del contenido */
+  }
+  
+  /* Contenedor principal del footer */
+  .contenedor-footer {
+    display: flex; /* Usamos flexbox para acomodar elementos */
+    flex-direction: column; /* Los elementos se apilan en columna por defecto */
+    align-items: center; /* Centramos horizontalmente */
+    gap: 25px; /* Espacio entre los elementos */
+  }
+  
+  /* Estilos para el logo */
+  .footer-logo img {
+    width: 100px; /* Ancho fijo */
+    height: auto; /* Altura automática proporcional */
+    border-radius: 50%; /* Hace el logo circular */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15); /* Sombrita suave alrededor */
+  }
+  
+  /* Lista de navegación */
+  .navegacion-footer ul {
+    list-style: none; /* Quitamos viñetas */
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Cada item de navegación */
+  .navegacion-footer li {
+    margin: 6px 0; /* Espacio entre enlaces */
+  }
+  
+  /* Enlaces del footer */
+  .navegacion-footer a {
+    text-decoration: none; /* Quitamos subrayado */
+    color: #000; /* Negro */
+    font-weight: 500; /* Texto un poco más grueso */
+    transition: color 0.3s ease; /* Transición suave al pasar el mouse */
+  }
+  
+  /* Efecto al pasar el mouse sobre los enlaces */
+  .navegacion-footer a:hover {
+    color: #b30086; /* Cambia el color a un tono más fuerte */
+  }
+  
+  /* Contenedor de iconos de redes sociales */
+  .footer-redesSociales a {
+    margin: 0 8px; /* Espaciado horizontal entre iconos */
+    display: inline-block;
+    transition: transform 0.3s ease; /* Efecto suave al hacer hover */
+  }
+  
+  /* Iconos dentro de las redes sociales */
+  .footer-redesSociales img {
+    width: 24px;
+    height: 24px;
+    filter: grayscale(100%); /* Iconos en blanco y negro inicialmente */
+    transition: filter 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+  }
+  
+  /* Al pasar el mouse sobre los iconos */
+  .footer-redesSociales a:hover img {
+    filter: grayscale(0%); /* Vuelve al color original */
+    transform: scale(1.1); /* Agranda un poco el icono */
+  }
+  
+  /* Texto legal / de autor */
+  .footer-text {
+    font-size: 12px; /* Tamaño de letra pequeño */
+    color: #000; /* Color del texto */
+  }
+  
+  /* Estilo del link en los créditos */
+  .footer-text a {
+    color: #000;
+    font-weight: 600; /* Un poco más destacado */
+    text-decoration: none;
+  }
+  
+  /* Hover en el link de créditos */
+  .footer-text a:hover {
+    color: #b30086; /* Tono fuerte al pasar el mouse */
+  }
+  
+  /* Estilos para pantallas medianas y grandes */
+  @media (min-width: 768px) {
+    .contenedor-footer {
+      flex-direction: row; /* Cambiamos de columna a fila */
+      justify-content: space-between; /* Espaciado entre secciones */
+      align-items: flex-start; /* Alineación arriba */
+      text-align: left; /* Alineación de texto a la izquierda */
+      flex-wrap: wrap; /* Permite que los elementos bajen si no hay espacio */
+    }
+  
+    /* Cada sección ocupa su espacio */
+    .footer-logo,
+    .navegacion-footer,
+    .footer-redesSociales {
+      flex: 1 1 200px; /* Mínimo de 200px por sección, se adaptan al espacio */
+    }
+  
+    /* Texto de derechos en línea separada */
+    .footer-text {
+      flex-basis: 100%; /* Ocupa toda la fila */
+      text-align: center;
+      margin-top: 20px; /* Espacio arriba */
+    }
+  }
+
+  /* Fin footer */

@@ -33,31 +33,40 @@
             <h1>Haru Tricot</h1>
         </div>
 
+        <!-- Botón del menú hamburguesa -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
         <!-- Menú de navegación -->
-        <nav class="navbar">
+        <nav class="navbar" id="navbar"> <!-- Agregué un id="navbar" -->
             <ul>
                 <li><a href="index.html" class="active"><strong>Inicio</strong></a></li>
                 <li><a href="productos.html">Nosotros</a></li>
                 <li><a href="realiza.html">Realiza tu Compra</a></li>
                 <li><a href="contacto.html">Contáctanos</a></li>
             </ul>
+
+            <!-- Redes sociales -->
+            <div class="iconosRedes">
+                <a href="https://www.facebook.com/profile.php?id=61563545625441">
+                    <img src="imgHaruT/brand-facebook.png" alt="Facebook">
+                </a>
+                <a href="https://wa.me/573027084779">
+                    <img src="imgHaruT/brand-whatsapp.png" alt="WhatsApp">
+                </a>
+                <a href="https://www.tiktok.com/@haru_tricot">
+                    <img src="imgHaruT/brand-tiktok.png" alt="TikTok">
+                </a>
+                <a href="https://www.instagram.com/haru_tricot__/">
+                    <img src="imgHaruT/brand-instagram.png" alt="Instagram">
+                </a>
+            </div>
+
         </nav>
 
-        <!-- Redes sociales -->
-        <div class="iconosRedes">
-            <a href="https://www.facebook.com/profile.php?id=61563545625441">
-                <img src="imgHaruT/brand-facebook.png" alt="Facebook">
-            </a>
-            <a href="https://wa.me/573027084779">
-                <img src="imgHaruT/brand-whatsapp.png" alt="WhatsApp">
-            </a>
-            <a href="https://www.tiktok.com/@haru_tricot">
-                <img src="imgHaruT/brand-tiktok.png" alt="TikTok">
-            </a>
-            <a href="https://www.instagram.com/haru_tricot__/">
-                <img src="imgHaruT/brand-instagram.png" alt="Instagram">
-            </a>
-        </div>
     </header>
 
     <!-- Contenido principal de la clase-->
@@ -124,8 +133,8 @@
 
         <!-- section cosas a tener en cuentna-->
         <section class="detallesPedido">
-            <h2 class="seccion-titulo">Tu pedido, Tu estilo</h2>
-            <div class="contenedor-3-cosas">
+            <h2 class="section-title">Tu pedido, Tu estilo</h2>
+            <div class="contenedor-detalles">
                 <div class="cosas">
                     <img src="imgHaruT/carritoTransportador.png" alt="Carro transportador de envíos">
                     <h3>Entrega a Domicilio </h3>
@@ -192,6 +201,8 @@
 
         </div>
     </footer>
+
+    <script src="scripts.js"></script>
 
 </body>
 
