@@ -44,8 +44,8 @@
         <nav class="navbar" id="navbar"> <!-- Agregué un id="navbar" -->
             <ul>
                 <li><a href="index.html" class="active"><strong>Inicio</strong></a></li>
-                <li><a href="productos.html">Nosotros</a></li>
-                <li><a href="realiza.html">Realiza tu Compra</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="compra.html">Realiza tu Compra</a></li>
                 <li><a href="contacto.html">Contáctanos</a></li>
             </ul>
 
@@ -73,33 +73,30 @@
     <main>
         <!-- Section introductoria de que es Haru Tricot-->
         <section class="introduccion">
-            <article>
-                <h2>El regalo perfecto hecho a mano</h2>
-                <p>En Haru Tricot, nos especializamos en crear piezas únicas y personalizadas.</p>
-                <p>Desde amigurumis hasta prendas y accesorios, todo hecho a mano con amor y dedicación.</p>
-                <p>🌸 ¿Tienes una idea en mente? La hacemos realidad.</p>
-                <p>🌸 ¿Buscas un regalo especial? Lo tejemos a tu medida.</p>
-                <p>🌸 Cada puntada cuenta una historia, la tuya.</p>
-            </article>
-            <!-- <article> define un contenido independiente y autocontenido, 
-                como una noticia, un post de blog o una tarjeta de producto.
-                En este caso, la etiqueta <article> se usa para encapsular un bloque de contenido informativo 
-                    sobre Haru Tricot, asegurando que esta sección pueda ser entendida como una unidad 
-                    independiente dentro de la página.-->
+            <div class="texto">
+                <h2 class="titulo-intro">El regalo perfecto hecho a mano</h2>
+                <p>En Haru Tricot, nos especializamos en crear piezas únicas y personalizadas. Desde amigurumis hasta
+                    prendas y accesorios, todo hecho a mano con amor y dedicación.</p>
+                <p class="p1">🌸 ¿Tienes una idea en mente? La hacemos realidad.</p>
+                <p class="p1">🌸 ¿Buscas un regalo especial? Lo tejemos a tu medida.</p>
+                <p class="p1">🌸 Cada puntada cuenta una historia, la tuya.</p>
 
-            <!--Imagenes -->
-            <div class="imagenesSection1">
-                <img src="imgHaruT/miniRamitoFlores.jpg" alt="Ramo de Flores pequeño tejido a crochet">
-                <img src="imgHaruT/patoRana.jpg" alt="Pato con Gorrito de Rana tejido a crochet">
+                <!--Botones-->
+                <div class="btn">
+                    <button class="btn-ordena">Ordena Ahora</button>
+                    <button class="btn-productos">Productos</button>
+                </div>
             </div>
 
-            <!--Botones-->
-            <div class="botonesSection1">
-                <button class="btn ordena">Ordena Ahora</button>
-                <button class="btn consulta">Consulta</button>
+            <!-- Contenedor de imágenes -->
+            <div class="imagenes">
+                <div class="contenedor-imagen">
+                    <img src="imgHaruT/patoRana.jpg" alt="Pato con Gorrito de Rana" class="img-principal">
+                    <img src="imgHaruT/miniRamitoFlores.jpg" alt="Ramito de Flores" class="img-pequena">
+                </div>
             </div>
-
         </section>
+
 
         <!-- Section para los productos destacados-->
         <section class="productos-destacados">

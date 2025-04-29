@@ -1,34 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!-- Icono de la página-->
+        <link rel="icon" type="image/png" href="imgHaruT/CabezaHaru - Logo transparente.png">
+    
+        <!-- Estilos de la página -->
+        <link href="styles.css" rel="stylesheet">
+    
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:slnt,wght@-10..0,100..900&display=swap"
+            rel="stylesheet">
+    
+        <!-- Titulo de la página -->
+        <title>Haru Tricot</title>
+    
+    </head>
 <body>
-    <header>
-        <div class="logoCuadrado">
+    <!-- Header -->
+    <header class="header">
+        <!-- Logo Haru -->
+        <div class="logo-contenedor">
             <img src="imgHaruT/logoHaruCuadrado.png" alt="Logo Haru Tricot">
+            <h1>Haru Tricot</h1>
         </div>
 
-        <h1>Haru Tricot</h1>
+        <!-- Botón del menú hamburguesa -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
-        <nav>
-            <ul class="linksNave">
+        <!-- Menú de navegación -->
+        <nav class="navbar" id="navbar"> <!-- Agregué un id="navbar" -->
+            <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="productos.html">Nosotros</a></li>
-                <li><a href="realiza.html">Realiza tu Compra</a></li>
+                <li><a href="productos.html" class="active"><strong>Productos</strong></a></li>
+                <li><a href="compra.html">Realiza tu Compra</a></li>
                 <li><a href="contacto.html">Contáctanos</a></li>
             </ul>
 
+            <!-- Redes sociales -->
             <div class="iconosRedes">
-                <a href="https://www.facebook.com/profile.php?id=61563545625441"><img src="imgHaruT/brand-facebook.png" alt="Facebook"></a>
-                <a href="https://wa.me/573027084779"><img src="imgHaruT/brand-whatsapp.png" alt="WhatsApp"></a>
-                <a href="https://www.tiktok.com/@haru_tricot"><img src="imgHaruT/brand-tiktok.png" alt="TikTok"></a>
-                <a href="https://www.instagram.com/haru_tricot__/"><img src="imgHaruT/brand-instagram.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com/profile.php?id=61563545625441">
+                    <img src="imgHaruT/brand-facebook.png" alt="Facebook">
+                </a>
+                <a href="https://wa.me/573027084779">
+                    <img src="imgHaruT/brand-whatsapp.png" alt="WhatsApp">
+                </a>
+                <a href="https://www.tiktok.com/@haru_tricot">
+                    <img src="imgHaruT/brand-tiktok.png" alt="TikTok">
+                </a>
+                <a href="https://www.instagram.com/haru_tricot__/">
+                    <img src="imgHaruT/brand-instagram.png" alt="Instagram">
+                </a>
             </div>
+
         </nav>
+
     </header>
+
+    <script src="scripts.js"></script>
     
 </body>
 </html>

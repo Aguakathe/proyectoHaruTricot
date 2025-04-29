@@ -7,6 +7,7 @@
   
   body {
     font-family: 'Arial', sans-serif;
+    background-color: #f8f2ea;
   }
   
 /*           -----         */
@@ -151,128 +152,167 @@
 }
 
 /* Fin del header*/
-/* ------------- */
+/* ---------------- */
 
 
+/*              -----         */
+ /* Primera Section -- Introducción Haru Tricot */
 
- /* Introducción */
  .introduccion {
-    display: flex; /* Distribuye elementos en fila */
-    flex-wrap: wrap; /* Permite que los elementos bajen si no caben en una sola línea */
-    justify-content: space-between; /* Espacio entre elementos hijos */
-    align-items: flex-start; /* Alinea los elementos al inicio verticalmente */
-    padding: 50px; /* Espacio interno */
-    background-color: #fffafc; /* Color de fondo suave */
-    border: 3px solid #e8c9f0; /* Borde lila */
-    border-radius: 12px; /* Bordes redondeados */
-    gap: 30px; /* Espacio entre elementos */
-    font-family: 'Poppins', sans-serif; /* Fuente estilizada */
+  display: flex; /* Organizar los elementos en fila*/
+  align-items: center; /* Centra verticalmente */
+  justify-content: space-between; /* Deja espacio entre texto e imágenes */
+  padding: 50px 65px; /* Espacio interno*/
+  flex-wrap: wrap;
+  gap:30px;
+
+}
+
+.titulo-intro{
+  font-size: 60px;
+  margin-bottom: 25px;
+}
+
+section p {
+  line-height: 1.6;
+  font-size: 17px;
+  margin-bottom: 10px; /* Añadí un margen para separar los párrafos entre sí */
+}
+
+.texto {
+  flex: 1; 
+  min-width: 300px;
+  padding-right: 20px; /* Agrega espacio a la derecha del texto para separarlo de las imágenes */
+}
+
+/* Botones */
+
+.btn {
+  margin: 20px 0px; /* Espacio alrededor del contenedor de botones */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Separación entre botones */
+}
+
+.btn-ordena,
+.btn-productos {
+  padding: 15px 30px; /* Más grandes los botones */
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-ordena {
+  background-color: #d8a8f0; /* Morado claro */
+  border: none;
+  color: black;
+}
+
+.btn-ordena:hover {
+  background-color: #c58be2; /* Un morado más fuerte en hover */
+}
+
+.btn-productos {
+  background-color: transparent;
+  border: 2px solid #d8a8f0; /* Borde morado, más grueso */
+  color: black;
+}
+
+.btn-productos:hover {
+  background-color: #d8a8f0; /* Se rellena en hover */
+  color: white;
+}
+
+
+/* Imagenes */
+.imagenes {
+  flex: 1; /* Ocupará el espacio disponible */
+  display: flex; /* Convierte en un contenedor flex */
+  justify-content: center; /* Centra horizontalmente los elementos hijos */
+  align-items: center; /* Centra verticalmente los elementos hijos */
+  min-width: 300px; /* Establece un ancho mínimo de 300px */
+  position: relative; /* Para posicionar elementos hijos de manera absoluta respecto a este */
+}
+
+.contenedor-imagen {
+  position: relative; /* Contenedor relativo para posicionar hijos absolutamente */
+  width: 400px; /* Ancho fijo */
+  height: 400px; /* Alto fijo */
+  aspect-ratio: 1 / 1; /* Mantiene proporción 1:1 */
+  max-width: 400px; /* Evita que se estire demasiado */
+}
+
+.img-principal {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: 100%; /* Ocupa todo el alto del contenedor */
+  object-fit: cover; /* La imagen se recorta para cubrir el contenedor */
+  border-radius: 50%; /* Hace la imagen circular */
+}
+
+.img-pequena {
+  position: absolute; /* Se posiciona respecto al contenedor-imagen */
+  top: 0; /* Pegada arriba */
+  left: 0; /* Pegada a  */
+  width: 90px; /* Ancho fijo */
+  height: 90px; /* Alto fijo */
+  border-radius: 50%; /* Imagen pequeña también es circular */
+  border: 3px solid white; /* Borde blanco */
+  background-color: white; /* Fondo blanco por si la imagen falla */
+}
+
+/* RESPONSIVE para móviles */
+@media (max-width: 768px) {
+  .introduccion {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
   }
-  
-  /* Estilos del bloque de texto */
-  .introduccion article {
-    flex: 1 1 400px; /* Tamaño flexible mínimo 400px */
-    max-width: 600px; /* No crecer más allá de 600px */
+
+  .texto {
+    padding-right: 0;
   }
-  
-  /* Título principal */
-  .introduccion h2 {
-    font-size: 36px;
-    color: #2c2c2c;
-    margin-bottom: 15px;
-  }
-  
-  /* Texto del artículo */
-  .introduccion p {
-    font-size: 16px;
-    color: #444;
-    margin-bottom: 10px;
-  }
-  
-  /* Resalta los ítems especiales en color rosado */
-  .introduccion p:nth-child(4),
-  .introduccion p:nth-child(5) {
-    color: #b30086;
-    font-weight: 500;
-  }
-  
-  /* Contenedor de las imágenes */
-  .imagenesSection1 {
-    position: relative; /* Para posicionar la imagen superior */
-    flex: 1 1 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Estilo general de las imágenes */
-  .imagenesSection1 img {
-    border-radius: 50%; /* Hace las imágenes redondas */
-    object-fit: cover; /* Asegura que la imagen se recorte bien */
-  }
-  
-  /* Imagen pequeña (ramito) superpuesta */
-  .imagenesSection1 img:first-child {
-    position: absolute;
-    top: -20px; /* Subida respecto al contenedor */
-    left: 40px; /* Hacia la derecha */
-    width: 120px;
-    height: 120px;
-    border: 4px solid white; /* Borde blanco alrededor */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
-    z-index: 2; /* Se pone encima de la otra imagen */
-  }
-  
-  /* Imagen principal (pato rana) */
-  .imagenesSection1 img:last-child {
-    width: 300px;
-    height: 300px;
-    border: 4px solid transparent; /* Solo para mantener proporción */
-    z-index: 1; /* Detrás de la imagen pequeña */
-  }
-  
-  /* Contenedor de los botones */
-  .botonesSection1 {
-    flex-basis: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
-    margin-top: 20px;
-    display: flex;
-    gap: 15px; /* Espacio entre botones */
-  }
-  
-  /* Estilo general para ambos botones */
+
   .btn {
-    padding: 10px 20px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-family: 'Poppins', sans-serif;
-    cursor: pointer;
-    transition: all 0.3s ease; /* Animación suave al pasar el mouse */
+    justify-content: center;
   }
-  
-  /* Botón "Ordena Ahora" */
-  .btn.ordena {
-    background-color: #e9c4f6;
-    color: #000;
-    border: none;
+
+  .contenedor-imagen {
+    width: 250px;
+    height: 250px;
   }
-  
-  /* Hover para "Ordena Ahora" */
-  .btn.ordena:hover {
-    background-color: #dca5f0;
+
+  .img-pequena {
+    width: 60px;
+    height: 60px;
+    bottom: 5px;
+    right: 5px;
   }
-  
-  /* Botón "Consulta" */
-  .btn.consulta {
-    background-color: transparent;
-    border: 1px solid #ccc;
-    color: #000;
+
+  .titulo-intro {
+    font-size: 40px;
   }
-  
-  /* Hover para "Consulta" */
-  .btn.consulta:hover {
-    border-color: #aaa;
+}
+
+@media (max-width: 480px) {
+  .titulo-intro {
+    font-size: 32px;
   }
- /* Fin introducción */
+
+  .btn-ordena,
+  .btn-productos {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+
+
+ /*        Fin Introducción Section    */
+ /*           -----           */
+
 
  
  /*                   -----                */
@@ -310,99 +350,117 @@
 /*              -----              */
 /*        Sección Productos        */
 
+/*              -----              */
+/*        Sección Productos        */
+
+/* Contenedor principal de productos */
 .contenedor-productos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 3rem 2rem;
-    gap: 2rem;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Mejor alineación centrada */
+  padding: 2rem 1rem; /* Menos padding para más contenido visible */
+  gap: 4rem; /* Menor espacio entre productos */
+}
+
+/* Estilo individual de cada producto */
+.producto {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 1rem;
+  flex: 1 1 calc(23% - 1rem); /* Ajuste flexible: 4 productos por fila, considerando gap */
+  max-width: calc(23% - 1rem);
+  box-shadow: 0 8px 20px #ba91c8;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Imagen del producto */
+.producto img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 8px 20px #ba91c8;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre el producto */
+.producto:hover {
+  transform: scale(1.04);
+  box-shadow: 0 8px 20px rgba(236, 15, 217, 0.4);
+}
+
+/* Efecto al pasar el mouse sobre la imagen */
+.producto:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(236, 15, 217, 0.5);
+}
+
+/* Estilo del precio */
+.precio {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #d58bec;
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Párrafos dentro del producto */
+.producto p {
+  padding: 5px;
+}
+
+/* Título del producto */
+.producto h3 {
+  padding: 15px;
+  text-align: center;
+}
+
+/* ----- Media Queries para adaptarlo mejor a distintas pantallas ----- */
+
+/* Para pantallas medianas (tablets) */
+@media (max-width: 1024px) {
   .producto {
-    background-color: #fbe5fd;
-    padding: 1rem;
-    border-radius: 1rem;
-    flex-basis: 22%; /* Por defecto, 4 productos por fila */
-    box-shadow: 0 2px 8px rgba(151, 89, 163, 0.404);
-    text-align: center;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+      flex: 1 1 calc(45% - 1rem); /* 2 productos por fila */
+      max-width: calc(45% - 1rem);
   }
-  
+}
+
+/* Para pantallas pequeñas (móviles grandes) */
+@media (max-width: 768px) {
+  .producto {
+      flex: 1 1 calc(90% - 1rem); /* 1 producto por fila, más centrado */
+      max-width: calc(90% - 1rem);
+  }
+
   .producto img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.6);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 140px;
+      height: 140px;
   }
-  
-  .producto:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(236, 15, 217, 0.4);
-  }
-  
-  .producto:hover img {
-    transform: scale(1.05);
-    box-shadow: 0 6px 18px rgba(236, 15, 217, 0.5);
-  }
-  
+
   .precio {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 16px;
-    background-color: #ec8bd0;
-    color: white;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 16px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .producto p {
-    padding: 5px;
-  }
-  
-  .producto h3 {
-    padding: 20px;
-    text-align: center;
-  
-  /* ----- Media Queries para pantallas pequeñas ----- */
-  }
-  
-  @media (max-width: 1024px) {
-    .producto {
-      flex-basis: 48%; /* 2 productos por fila en pantallas medianas */
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .producto {
-      flex-basis: 100%; /* 1 producto por fila en pantallas pequeñas */
-    }
-  
-    .producto img {
-      width: 150px; /* Ajustamos el tamaño de las imágenes */
-      height: 150px;
-    }
-  
-    .precio {
-      font-size: 14px; /* Reducimos el tamaño del precio */
+      font-size: 14px;
       padding: 6px 12px;
-    }
   }
+}
+  /* ----- Media Queries para pantallas pequeñas ----- */
+
+  
 
 /* ---------------------------- */
 /* Estilos Tu Pedido, Tu Estilo*/
 
 .detallesPedido {
     padding: 50px 20px;
-    background-color: #fef6ff;
     text-align: center;
   }
   
@@ -442,7 +500,6 @@
   
   .cosas p {
     font-size: 15px; /* Tamaño del texto */
-    color: #4a4a4a; /* Gris oscuro */
     margin-bottom: 8px; /* Espacio entre párrafos */
   }
 
@@ -565,17 +622,11 @@
   @media (min-width: 768px) {
     .contenedor-footer {
       flex-direction: row; /* Cambiamos de columna a fila */
-      justify-content: space-between; /* Espaciado entre secciones */
+      justify-content: center; /* Espaciado entre secciones */
       align-items: flex-start; /* Alineación arriba */
-      text-align: left; /* Alineación de texto a la izquierda */
+      text-align: center; /* Alineación de texto a la izquierda */
       flex-wrap: wrap; /* Permite que los elementos bajen si no hay espacio */
-    }
-  
-    /* Cada sección ocupa su espacio */
-    .footer-logo,
-    .navegacion-footer,
-    .footer-redesSociales {
-      flex: 1 1 200px; /* Mínimo de 200px por sección, se adaptan al espacio */
+      gap: 60px; /* espacio entre los elementos si quieres más separación */
     }
   
     /* Texto de derechos en línea separada */
