@@ -1,0 +1,164 @@
+const productos = [
+    {
+      name: "Llaveros",
+      price: 13500,
+      size: "6 cm aprox",
+      description: "Variedad de colores disponibles",
+      image: "img/llavero.jpg"
+    },
+    {
+      name: "Pulpo Grande",
+      price: 14000,
+      size: "7 cm aprox",
+      description: "2 colores disponibles",
+      image: "img/pulpo_grande.jpg"
+    },
+    {
+      name: "Pulpo Pequeño",
+      price: 18000,
+      size: "10 cm aprox",
+      description: "Variedad de colores disponibles",
+      image: "img/pulpo_pequeño.jpg"
+    },
+    {
+      name: "Medusa",
+      price: 13500,
+      size: "10 cm aprox",
+      description: "Disponible en azul, rosado y verde",
+      image: "img/medusa.jpg"
+    },
+    {
+      name: "Dinosaurio BB",
+      price: 17000,
+      size: "7 cm aprox de alto",
+      description: "",
+      image: "img/dino_bb.jpg"
+    },
+    {
+      name: "Capibara Pochita",
+      price: 17800,
+      size: "7 cm aprox de alto",
+      description: "Se puede hacer de distinto color",
+      image: "img/capibara_pochita.jpg"
+    },
+    {
+      name: "Mini Osito",
+      price: 14000,
+      size: "6 cm aprox de alto",
+      description: "Se puede hacer en distintos colores",
+      image: "img/mini_osito.jpg"
+    },
+    {
+      name: "Gato Pequeño",
+      price: 14500,
+      size: "13 cm aprox de alto",
+      description: "",
+      image: "img/gato_pequeño.jpg"
+    },
+    {
+      name: "Conejo Pequeño",
+      price: 15000,
+      size: "70 cm aprox",
+      description: "",
+      image: "img/conejo_pequeño.jpg"
+    },
+    {
+      name: "Foca",
+      price: 19000,
+      size: "8 cm de alto, 16 cm de largo",
+      description: "",
+      image: "img/foca.jpg"
+    },
+    {
+      name: "Pato con Sombrero de Rana",
+      price: 28000,
+      size: "12 cm aprox",
+      description: "El color del sombrero se puede modificar",
+      image: "img/pato_rana.jpg"
+    },
+    {
+      name: "Bebé Búho",
+      price: 21500,
+      size: "12 cm aprox",
+      description: "Se puede hacer en diferente color",
+      image: "img/bebe_buho.jpg"
+    },
+    {
+      name: "Mini Bouquet",
+      price: 25500,
+      size: "9 cm aprox",
+      description: "El color de las flores se puede modificar",
+      image: "img/mini_bouquet.jpg"
+    },
+    {
+      name: "Chihuahua",
+      price: 30000,
+      size: "12 cm aprox",
+      description: "Se puede personalizar a los colores de tu mascota",
+      image: "img/chihuahua.jpg"
+    },
+    {
+      name: "Tortuga",
+      price: 30000,
+      size: "7 cm de alto, 21 cm de largo",
+      description: "Color modificable",
+      image: "img/tortuga.jpg"
+    },
+    {
+      name: "Gato Panzón",
+      price: 30500,
+      size: "12 cm alto, 24 cm largo",
+      description: "Se puede personalizar",
+      image: "img/gato_panzon.jpg"
+    },
+    {
+      name: "Conejo Grande",
+      price: 35000,
+      size: "18 cm aprox",
+      description: "El corazón y los moños se pueden cambiar de color",
+      image: "img/conejo_grande.jpg"
+    },
+    {
+      name: "Capibara con Mochila de Tortuga",
+      price: 43000,
+      size: "25 cm aprox",
+      description: "",
+      image: "img/capibara_mochila.jpg"
+    },
+    {
+      name: "Oso",
+      price: 43000,
+      size: "25 cm aprox de alto",
+      description: "",
+      image: "img/oso.jpg"
+    },
+    {
+      name: "Stitch",
+      price: 48000,
+      size: "25 cm aprox",
+      description: "",
+      image: "img/stitch.jpg"
+    },
+    {
+      name: "Stitch Rosa",
+      price: 52000,
+      size: "25 cm aprox",
+      description: "",
+      image: "img/stitch_rosa.jpg"
+    },
+    {
+      name: "Dinosaurio",
+      price: 67000,
+      size: "28 cm aprox de alto",
+      description: "Se puede hacer en el color que desee",
+      image: "img/dinosaurio.jpg"
+    },
+    {
+      name: "Vaca",
+      price: 78000,
+      size: "30 cm aprox de alto",
+      description: "Se puede hacer en blanco y negro",
+      image: "img/vaca.jpg"
+    }
+  ];
+  

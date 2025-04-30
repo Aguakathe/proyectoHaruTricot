@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-        <!-- Icono de la página-->
-        <link rel="icon" type="image/png" href="imgHaruT/CabezaHaru - Logo transparente.png">
-    
-        <!-- Estilos de la página -->
-        <link href="styles.css" rel="stylesheet">
-    
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:slnt,wght@-10..0,100..900&display=swap"
-            rel="stylesheet">
-    
-        <!-- Titulo de la página -->
-        <title>Haru Tricot</title>
-    
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Icono de la página-->
+    <link rel="icon" type="image/png" href="imgHaruT/CabezaHaru - Logo transparente.png">
+
+    <!-- Estilos de la página -->
+    <link href="/estilosCss/estilosGenerales.css" rel="stylesheet">
+    <link href="/estilosCss/stylesProductos.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:slnt,wght@-10..0,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Titulo de la página -->
+    <title>Haru Tricot</title>
+
+</head>
+
 <body>
     <!-- Header -->
     <header class="header">
@@ -66,7 +69,29 @@
 
     </header>
 
+    <h1 class="title-productos">Productos</h1>
+    <p class="subtitulo">En Haru Tricot, cada creación es única y hecha a mano con amor ❤️</p>
+
+    <div class="grid-container" id="productos-container">
+        <!-- Aquí se insertarán los productos -->
+    </div>
+
+    <!-- Mostrar el detalle de los productos-->
+    <div class="productos-container" id="productos-container">
+        <div class="productos-content">
+            <span class="close" id="close">&times;</span>
+            <h3 id="productos-name"></h3>
+            <p><strong>Precio:</strong> <span id="producto-precio"></span></p>
+            <p><strong>Tamaño:</strong> <span id="producto-tamano"></span></p>
+            <p><strong>Descripción:</strong> <span id="producto-descripcion"></span></p>
+            <img id="producto-imagen" src="" alt="Imagen del producto" />
+        </div>
+    </div>
+
+
+    <!-- JavaScript-->
     <script src="scripts.js"></script>
-    
+
 </body>
+
 </html>

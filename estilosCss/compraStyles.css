@@ -1,0 +1,204 @@
+/* Titulo */
+.title {
+    margin: 50px 0px;
+    text-align: center;
+}
+
+.title-compra {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #000;
+    margin: 75px 50px;
+    gap: 10px;
+}
+
+.title-compra::after {
+    content: "";
+    flex-grow: 1;
+    height: 3px;
+    background-color: #ba91c8;
+}
+
+/* ------------------------ */
+/*  Section ¿Cómo comprar?  */
+
+.como-comprar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 65px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.importante{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 65px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.contenedor-pasos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.texto-pasos {
+    flex: 1.2;
+}
+
+.paso {
+    margin-bottom: 20px;
+}
+
+.paso strong {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #333;
+}
+
+.paso p {
+    margin: 5px 0;
+    font-size: 15px;
+    color: #444;
+}
+
+.contenedor-imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    flex:1.8;
+}
+
+.contenedor-imagen img {
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- MEDIA QUERY RESPONSIVE --- */
+@media (max-width: 768px) {
+    .contenedor-pasos {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .texto-pasos {
+        width: 100%;
+    }
+
+    .contenedor-imagen {
+        width: 100%;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .title-compra {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 40px 20px;
+    }
+
+    .title-compra::after {
+        width: 100%;
+    }
+
+    .como-comprar {
+        padding: 0px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+
+/* formulario */
+
+.contenedor-formulario {
+    display: flex;               /* Usa Flexbox */
+    justify-content: center;     /* Centra horizontalmente */
+    align-items: center;         /* Centra verticalmente */
+    min-height: 100vh;           /* Ocupa el alto completo de la ventana */
+    padding: 0px 20px 100px 20px;               /* Espacio interno para pantallas pequeñas */
+  }
+
+.formulario {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .grupo-input {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .grupo-input > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+
+  input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+
+  input[type="checkbox"] {
+    width: auto;
+  }
+
+  .politica {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #555;
+  }
+
+  button {
+    padding: 12px;
+    background-color: #ba91c8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #8b6d96;
+  }
+
+  .borde-color {
+    border: 2px solid #ba91c8; /* Color lila, puedes cambiarlo */
+  }

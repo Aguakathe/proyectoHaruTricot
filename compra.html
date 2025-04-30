@@ -9,7 +9,8 @@
     <link rel="icon" type="image/png" href="imgHaruT/CabezaHaru - Logo transparente.png">
 
     <!-- Estilos de la página -->
-    <link href="styles.css" rel="stylesheet">
+    <link href="/estilosCss/estilosGenerales.css" rel="stylesheet">
+    <link href="/estilosCss/compraStyles.css" rel="stylesheet">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,45 +69,137 @@
 
     </header>
 
-    <!-- Contenido -->
-    <div class="contenedor">
-        <h1>Realiza tu Compra</h1>
+    <!-- Titulo -->
+    <h1 class="title">Realiza tu Compra</h1>
 
-        <section class="como-comprar">
-            <h2>¿Cómo comprar? 🎁</h2>
-            <div class="paso">
-                <strong>1️⃣ Escríbenos ✉️</strong>
-                <p>Completa el formulario de pedido o mándanos un mensaje al <strong>+57 3027084779</strong> para hacer
-                    tu pedido. Puedes elegir entre nuestros modelos disponibles o pedir algo 100% personalizado.</p>
-            </div>
-            <div class="paso">
-                <strong>2️⃣ Personaliza tu pedido 🎨</strong>
-                <p>✨ Escoge los colores y detalles que prefieras.</p>
-                <p>✨ Cuéntanos tu idea y la haremos realidad.</p>
-            </div>
-            <div class="paso">
-                <strong>3️⃣ Proceso de compra</strong>
-                <p>✅ Separa tu pedido con un 50% de abono.</p>
-                <p>✅ Elaboración 100% artesanal (1 a 6 días hábiles).</p>
-                <p>✅ Envíos a toda Colombia (costo adicional).</p>
+    <!-- Subtitulo -->
+    <h2 class="title-compra">¿Cómo comprar? 🎁</h2>
+
+    <!-- Section ¿Como comprar? -->
+    <section class="como-comprar">
+        <div class="contenedor-pasos">
+            <div class="texto-pasos">
+                <div class="paso">
+                    <strong>1️⃣ Escríbenos ✉️</strong>
+                    <p>Completa el formulario de pedido o mándanos un mensaje al <strong>+57 3027084779</strong> para
+                        hacer
+                        tu pedido. Puedes elegir entre nuestros modelos disponibles o pedir algo 100% personalizado.</p>
+                </div>
+                <div class="paso">
+                    <strong>2️⃣ Personaliza tu pedido 🎨</strong>
+                    <p>✨ Escoge los colores y detalles que prefieras.</p>
+                    <p>✨ Cuéntanos tu idea y la haremos realidad.</p>
+                </div>
+                <div class="paso">
+                    <strong>3️⃣ Proceso de compra</strong>
+                    <p>✅ Separa tu pedido con un 50% de abono.</p>
+                    <p>✅ Elaboración 100% artesanal (1 a 6 días hábiles).</p>
+                    <p>✅ Envíos a toda Colombia (costo adicional).</p>
+                </div>
             </div>
 
             <div class="contenedor-imagen">
-                <img src="#" alt="Producto tejido a mano">
+                <img src="https://i.pinimg.com/736x/45/56/1e/45561ef9d2af51c30d79466bc02e6fc3.jpg"
+                    alt="Producto tejido a mano">
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="importante"></section>>
-        <h2>Importante ⚠</h2>
-        <div class="paso">
-            <p>⏳ <strong>Tiempo de elaboración</strong>: 1 a 6 días hábiles, según la complejidad.</p>
-            <p>🚚 El envío no está incluido en el precio.</p>
-            <p>💌 Cotizaciones disponibles para pedidos personalizados.</p>
+    <!-- Subtitulo -->
+    <h2 class="title-compra">Importante ⚠</h2>
+
+    <!-- Section Importante -->
+    <section class="importante">
+        <div class="contenedor-pasos">
+            <div class="texto-pasos">
+                <div class="paso">
+                    <p>📦Tiempo de elaboración: 1 a 6 días hábiles, según la complejidad.</p>
+                    <p>🚚 El envío no está incluido en el precio.</p>
+                    <p>💌 Cotizaciones disponibles para pedidos personalizados.</p>
+                </div>
+            </div>
+
+            <div class="contenedor-imagen">
+                <img src="https://i.pinimg.com/736x/cd/c0/f1/cdc0f1ca0bae4c20c2f546fafc3f1a12.jpg" alt="Producto tejido a mano">
+            </div>
         </div>
-        <div class="contenedor-imagen">
-            <img src="#" alt="Producto tejido a mano">
+    </section>
+
+
+    <!-- Titulo Formulario -->
+    <h2 class="section-title">Formulario de Pedido</h2>
+
+    <!--Formulario-->
+   <!-- Contenedor para centrar el formulario -->
+<div class="contenedor-formulario">
+    <form class="formulario">
+      <!-- Grupo de campos para nombre, apellido y número de contacto -->
+      <div class="grupo-input">
+        <div>
+          <label>Nombre</label>
+          <input type="text" placeholder="Nombre" />
         </div>
-        </section>
+        <div>
+          <label>Apellido</label>
+          <input type="text" placeholder="Apellido" />
+        </div>
+        <div>
+          <label>Número de contacto</label>
+          <input type="text" placeholder="WhatsApp preferiblemente" />
+        </div>
+      </div>
+  
+      <!-- Grupo de campos para pedido, pago y entrega -->
+      <div class="grupo-input">
+        <div>
+          <label>¿Qué deseas pedir?</label>
+          <select>
+            <option>Modelo disponible</option>
+            <option>Pedido Personalizado</option>
+          </select>
+        </div>
+        <div>
+          <label>Método de pago</label>
+          <select>
+            <option>Nequi</option>
+            <option>Transferencia Bancaria</option>
+          </select>
+        </div>
+        <div>
+          <label>Método de Entrega</label>
+          <select>
+            <option>Contra entrega (Solo Bogotá)</option>
+            <option>Interrapidismo</option>
+          </select>
+        </div>
+      </div>
+  
+      <!-- Campo para colores -->
+      <label>Colores deseados:</label>
+      <input class="borde" type="text" placeholder="Describe los colores que te gustarían" />
+  
+      <!-- Campo para ideas personalizadas -->
+      <label>Si es personalizado, describe tu idea:</label>
+      <input class="borde" type="text" placeholder="Tu idea aquí" />
+  
+      <!-- Comentarios adicionales -->
+      <label>Comentarios Adicionales:</label>
+      <input class="borde" type="text" placeholder="Comentarios" />
+  
+      <!-- Checkbox para aceptar política -->
+      <div class="politica">
+        <input type="checkbox" />
+        <p>Política de tratamiento de datos</p>
+      </div>
+  
+      <!-- Botón de envío -->
+      <button type="submit">Enviar Pedido</button>
+    </form>
+  </div>
+
+
+
+
 
     </div>
 
@@ -127,10 +220,12 @@
             </nav>
 
             <div class="footer-redesSociales">
-                <a href="https://www.facebook.com/profile.php?id=61563545625441"><img src="imgHaruT/brand-facebook.png" alt="Facebook"></a>
+                <a href="https://www.facebook.com/profile.php?id=61563545625441"><img src="imgHaruT/brand-facebook.png"
+                        alt="Facebook"></a>
                 <a href="https://wa.me/573027084779"><img src="imgHaruT/brand-whatsapp.png" alt="WhatsApp"></a>
                 <a href="https://www.tiktok.com/@haru_tricot"><img src="imgHaruT/brand-tiktok.png" alt="TikTok"></a>
-                <a href="https://www.instagram.com/haru_tricot__/"><img src="imgHaruT/brand-instagram.png" alt="Instagram"></a>
+                <a href="https://www.instagram.com/haru_tricot__/"><img src="imgHaruT/brand-instagram.png"
+                        alt="Instagram"></a>
             </div>
 
             <p class="footer-text">
@@ -141,7 +236,7 @@
                     de destino tenga acceso a la página de origen, mejorando la seguridad y privacidad.-->
 
                 <!-- target blank para abrir el enlace en una nueva pestaña-->
-               
+
             </p>
 
             <!-- <ul> agrupa todos los elementos de la lista.
