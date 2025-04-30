@@ -19,7 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(222, 181, 238);
+    background-color: #deb5ee;
     padding: 15px 20px;
     position: sticky;
     top: 0;
@@ -195,7 +195,7 @@
 /*              Footer           */
  
   footer {
-    background-color: #e6a8e6; /* Fondo morado pastel */
+    background-color: #deb5ee; /* Fondo morado pastel */
     color: #000; /* Texto en negro para buena visibilidad */
     padding: 40px 20px; /* Espaciado interior */
     font-family: 'Poppins', sans-serif; /* Fuente amigable y moderna */
