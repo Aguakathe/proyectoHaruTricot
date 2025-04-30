@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Icono de la página-->
+    <link rel="icon" type="image/png" href="imgHaruT/CabezaHaru - Logo transparente.png">
+
+    <!-- Estilos de la página -->
+    <link href="/estilosCss/estilosGenerales.css" rel="stylesheet">
+    <link href="/estilosCss/contactoStyles.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:slnt,wght@-10..0,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Titulo de la página -->
+    <title>Haru Tricot</title>
+
+</head>
+<body>
+     <!-- Header -->
+     <header class="header">
+        <!-- Logo Haru -->
+        <div class="logo-contenedor">
+            <img src="imgHaruT/logoHaruCuadrado.png" alt="Logo Haru Tricot">
+            <h1>Haru Tricot</h1>
+        </div>
+
+        <!-- Botón del menú hamburguesa -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Menú de navegación -->
+        <nav class="navbar" id="navbar"> <!-- Agregué un id="navbar" -->
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="compra.html">Realiza tu Compra</a></li>
+                <li><a href="contacto.html" class="active"><strong>Contáctanos</strong></a></li>
+            </ul>
+
+            <!-- Redes sociales -->
+            <div class="iconosRedes">
+                <a href="https://www.facebook.com/profile.php?id=61563545625441">
+                    <img src="imgHaruT/brand-facebook.png" alt="Facebook">
+                </a>
+                <a href="https://wa.me/573027084779">
+                    <img src="imgHaruT/brand-whatsapp.png" alt="WhatsApp">
+                </a>
+                <a href="https://www.tiktok.com/@haru_tricot">
+                    <img src="imgHaruT/brand-tiktok.png" alt="TikTok">
+                </a>
+                <a href="https://www.instagram.com/haru_tricot__/">
+                    <img src="imgHaruT/brand-instagram.png" alt="Instagram">
+                </a>
+            </div>
+
+        </nav>
+    </header>
+
+    <h1 class="title">Contáctanos</h1>
+
+    <div class="contenedor-texto">
+        <p class="p">¿Tienes dudas o quieres más información? 💌</p>
+        <p class="p">Escríbenos aquí y te responderemos lo antes posible.</p>
+        <p class="p">📢 Si deseas hacer un pedido, visita la sección "Realiza tu compra" para conocer el proceso.</p>
+      </div>
+
+     <!-- Titulo Formulario -->
+     <h2 class="section-title">Formulario de Contacto</h2>
+
+    <!-- Formulario -->
+    <div class="contenedor-formulario">
+    <form class="formulario">
+        <div class="grupo">
+          <div class="campo">
+            <label>Nombre</label>
+            <input type="text" placeholder="Nombre">
+          </div>
+          <div class="campo">
+            <label>Apellido</label>
+            <input type="text" placeholder="Apellido">
+          </div>
+          <div class="campo">
+            <label>Número de contacto</label>
+            <input type="text" placeholder="WhatsApp preferiblemente">
+          </div>
+        </div>
+    
+        <div class="campo ancho">
+          <label>Correo Electrónico</label>
+          <input type="email" placeholder="Correo">
+        </div>
+    
+        <div class="campo ancho">
+          <label>Cuéntanos en qué podemos ayudarte</label>
+          <textarea placeholder="Describe los colores que te gustarían..."></textarea>
+        </div>
+    
+        <div class="check">
+          <input type="checkbox" id="politica">
+          <p class="poli">Política de tratamiento de datos</p>
+        </div>
+    
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+    </div>
+
+
+    <footer>
+        <!-- Div es un contenedor genérico -->
+        <div class="contenedor-footer">
+            <div class="footer-logo">
+                <img src="imgHaruT/logoHaruCuadrado.png" alt="Logo de Haru Tricot">
+            </div>
+
+            <nav class="navegacion-footer">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="realiza.html">Realiza tu Compra</a></li>
+                    <li><a href="contacto.html">Contáctanos</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer-redesSociales">
+                <a href="https://www.facebook.com/profile.php?id=61563545625441"><img src="imgHaruT/brand-facebook.png"
+                        alt="Facebook"></a>
+                <a href="https://wa.me/573027084779"><img src="imgHaruT/brand-whatsapp.png" alt="WhatsApp"></a>
+                <a href="https://www.tiktok.com/@haru_tricot"><img src="imgHaruT/brand-tiktok.png" alt="TikTok"></a>
+                <a href="https://www.instagram.com/haru_tricot__/"><img src="imgHaruT/brand-instagram.png"
+                        alt="Instagram"></a>
+            </div>
+
+            <p class="footer-text">
+                Haru Tricot © 2025. Todos los derechos reservados. <br>
+                Creado por <a href="https://instagram.com/katt.c3" target="_blank"
+                    rel="noopener noreferrer">@katt.c3</a>
+                <!-- rel="noopener noreferrer" en un enlace (<a>) evita que la página 
+                    de destino tenga acceso a la página de origen, mejorando la seguridad y privacidad.-->
+
+                <!-- target blank para abrir el enlace en una nueva pestaña-->
+
+            </p>
+
+            <!-- <ul> agrupa todos los elementos de la lista.
+            Cada <li> es un elemento de la lista.
+            <a> dentro de <li> convierte el ítem en un enlace navegable. -->
+
+        </div>
+    </footer>
+    
+</body>
+</html>
