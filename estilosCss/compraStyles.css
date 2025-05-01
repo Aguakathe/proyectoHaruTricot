@@ -202,3 +202,16 @@
   .borde-color {
     border: 2px solid #ba91c8; /* Color lila, puedes cambiarlo */
   }
+
+
+  @media (max-width: 768px) {
+    .title-compra {
+      margin-bottom: 20px;
+    }
+  
+    .contenedor-formulario {
+      min-height: auto;
+      padding-top: 0;
+      padding-bottom: 50px;
+    }
+  }
