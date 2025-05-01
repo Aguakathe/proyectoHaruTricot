@@ -72,26 +72,53 @@
     <h1 class="title-productos">Productos</h1>
     <p class="subtitulo">En Haru Tricot, cada creación es única y hecha a mano con amor ❤️</p>
 
-    <div class="grid-container" id="productos-container">
-        <!-- Aquí se insertarán los productos -->
-    </div>
 
-    <!-- Mostrar el detalle de los productos-->
-    <div class="productos-container" id="productos-container">
-        <div class="productos-content">
-            <span class="close" id="close">&times;</span>
-            <h3 id="productos-name"></h3>
-            <p><strong>Precio:</strong> <span id="producto-precio"></span></p>
-            <p><strong>Tamaño:</strong> <span id="producto-tamano"></span></p>
-            <p><strong>Descripción:</strong> <span id="producto-descripcion"></span></p>
-            <img id="producto-imagen" src="" alt="Imagen del producto" />
+
+    <footer>
+        <!-- Div es un contenedor genérico -->
+        <div class="contenedor-footer">
+            <div class="footer-logo">
+                <img src="imgHaruT/logoHaruCuadrado.png" alt="Logo de Haru Tricot">
+            </div>
+
+            <nav class="navegacion-footer">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="realiza.html">Realiza tu Compra</a></li>
+                    <li><a href="contacto.html">Contáctanos</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer-redesSociales">
+                <a href="https://www.facebook.com/profile.php?id=61563545625441"><img src="imgHaruT/brand-facebook.png"
+                        alt="Facebook"></a>
+                <a href="https://wa.me/573027084779"><img src="imgHaruT/brand-whatsapp.png" alt="WhatsApp"></a>
+                <a href="https://www.tiktok.com/@haru_tricot"><img src="imgHaruT/brand-tiktok.png" alt="TikTok"></a>
+                <a href="https://www.instagram.com/haru_tricot__/"><img src="imgHaruT/brand-instagram.png"
+                        alt="Instagram"></a>
+            </div>
+
+            <p class="footer-text">
+                Haru Tricot © 2025. Todos los derechos reservados. <br>
+                Creado por <a href="https://instagram.com/katt.c3" target="_blank"
+                    rel="noopener noreferrer">@katt.c3</a>
+                <!-- rel="noopener noreferrer" en un enlace (<a>) evita que la página 
+                    de destino tenga acceso a la página de origen, mejorando la seguridad y privacidad.-->
+
+                <!-- target blank para abrir el enlace en una nueva pestaña-->
+
+            </p>
+
+            <!-- <ul> agrupa todos los elementos de la lista.
+            Cada <li> es un elemento de la lista.
+            <a> dentro de <li> convierte el ítem en un enlace navegable. -->
+
         </div>
-    </div>
-
+    </footer>
 
     <!-- JavaScript-->
     <script src="/scriptsP/scripts.js"></script>
-
 </body>
 
 </html>
