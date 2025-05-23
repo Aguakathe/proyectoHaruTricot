@@ -18,7 +18,7 @@ const productos = [
     price: 14000,
     size: "7 cm aprox",
     description: "¡Listo para entrega en 2 colores! También puedes elegir entre una amplia variedad de tonos personalizados.",
-    image: "/imgHaruT/pulpoPequeño.jpg"
+    image: "/imgHaruT/pulpoGrande.jpg"
   },
   {
     name: "Medusa",
@@ -180,7 +180,7 @@ productos.forEach(p => {
         <p class="price">$${p.price.toLocaleString()}</p>
         <p>${p.size}</p>
         <p>${p.description || ' '}</p>
-        <a href="formulario-contacto.html">Contactar</a>
+        <a href="contacto.html">Contáctanos</a>
       </div>
     </div>
   `;
