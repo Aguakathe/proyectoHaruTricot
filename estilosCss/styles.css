@@ -108,7 +108,7 @@ section p {
   height: 90px; /* Alto fijo */
   border-radius: 50%; /* Imagen pequeña también es circular */
   border: 3px solid white; /* Borde blanco */
-  background-color: white; /* Fondo blanco por si la imagen falla */
+  background-color: #d8a8f0; /* Fondo blanco por si la imagen falla */
 }
 
 /* RESPONSIVE para móviles */
