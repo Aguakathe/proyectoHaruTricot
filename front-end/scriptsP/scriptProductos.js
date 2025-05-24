@@ -77,11 +77,11 @@ const productos = [
     image: "/imgHaruT/patoRana.jpg"
   },
   {
-    name: "Bebé Búho",
-    price: 21500,
-    size: "12 cm aprox",
-    description: "Se puede hacer en diferente color",
-    image: "/imgHaruT/bebeBuho.jpg"
+    name: "Foxy y Spidermans",
+    price: 30000,
+    size: "Entre 15 y 30 cm de alto aprox",
+    description: "Diseños disponibles: Foxy (15 cm – $30.000), Spiderman azul (20 cm – $45.000) y Spiderman negro (30 cm – $90.000). Se venden por separado. Imagen referencial con los tres modelos juntos.",
+    image: "/imgHaruT/spiderCat.jpg"
   },
   {
     name: "Mini Bouquet",
@@ -152,7 +152,7 @@ const productos = [
     size: "28 cm aprox de alto",
     description: "Se puede hacer en el color que desees.",
     image: "/imgHaruT/brontoRosa.jpg"
-    
+
   },
   {
     name: "Vaca",
@@ -160,6 +160,27 @@ const productos = [
     size: "30 cm aprox de alto",
     description: "Se puede hacer en blanco y negro",
     image: "/imgHaruT/vaca.jpg"
+  },
+  {
+    name: "Pochita",
+    price: 50000,
+    size: "320 cm de alto aprox y 25cm de largo aprox",
+    description: "Variedad de colores disponible",
+    image: "/imgHaruT/pochita.jpg"
+  },
+  {
+    name: "Payaso Plim Plim",
+    price: 200000,
+    size: "50cm de alto aprox",
+    description: "Variedad de colores disponible",
+    image: "/imgHaruT/payaso.jpg"
+  },
+  {
+    name: "Bebé Búho",
+    price: 21500,
+    size: "12 cm aprox",
+    description: "Se puede hacer en diferente color",
+    image: "/imgHaruT/bebeBuho.jpg"
   }
 ];
 
