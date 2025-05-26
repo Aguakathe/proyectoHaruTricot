@@ -41,6 +41,7 @@ section p {
   display: flex;
   flex-wrap: wrap;
   gap: 10px; /* Separación entre botones */
+  
 }
 
 .btn-ordena,
@@ -51,6 +52,7 @@ section p {
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
 }
 
 .btn-ordena {

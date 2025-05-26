@@ -27,24 +27,73 @@ db.connect((err) => {
   console.log('Conectado a la base de datos MySQL'); // Mensaje de éxito al conectar
 });
 
-// Ruta POST para recibir datos del formulario desde el cliente
+// Ruta POST para recibir datos del formulario de CONTACTO
 app.post('/contacto', (req, res) => {
   // Extrae los datos enviados en el cuerpo de la petición
-  const { nombre, email, mensaje } = req.body;
+  const { nombre,
+    apellido,
+    numero_contacto,
+    correo_electronico,
+    mensaje,
+    acepta_politica
+  } = req.body;
 
-  // Consulta SQL para insertar los datos en la tabla 'contacto'
-  const sql = 'INSERT INTO contacto (nombre, email, mensaje) VALUES (?, ?, ?)';
-  db.query(sql, [nombre, email, mensaje], (err, result) => {
-    if (err) {
-      console.error('Error al insertar datos:', err); // Muestra error en caso de fallo en la consulta
-      return res.status(500).send('Error del servidor'); // Responde con error 500 al cliente
+  const sql = 'INSERT INTO mensajes_contacto (nombre, apellido, numero_contacto, correo_electronico, mensaje, acepta_politica) VALUES (?, ?, ?, ?, ?, ?)';
+
+  db.query(sql, [nombre, apellido, numero_contacto, correo_electronico, mensaje, acepta_politica],
+    (err, result) => {
+      if (err) {
+        console.error('Error al insertar datos:', err);
+        return res.status(500).send('Error del servidor');
+      }
+      res.send('Formulario recibido y guardado correctamente.');
     }
-    // Si se inserta correctamente, envía mensaje de éxito
-    res.send('Formulario recibido y guardado correctamente.');
-  });
+  );
 });
+
+// Ruta POST para recibir datos del formulario de CONTACTO
+app.post('/compra', (req, res) => {
+  const {
+    nombre,
+    apellido,
+    numero_contacto,
+    tipo_pedido,
+    metodo_pago,
+    metodo_entrega,
+    colores_deseados,
+    idea_personalizada,
+    comentarios,
+    acepta_politica
+  } = req.body;
+
+  const sql = 'INSERT INTO pedidos ( nombre, apellido, numero_contacto, tipo_pedido, metodo_pago, metodo_entrega, colores_deseados, idea_personalizada, comentarios, acepta_politica) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+
+  db.query(sql, [
+    nombre,
+    apellido,
+    numero_contacto,
+    tipo_pedido,
+    metodo_pago,
+    metodo_entrega,
+    colores_deseados,
+    idea_personalizada,
+    comentarios,
+    acepta_politica
+  ],
+    (err, result) => {
+      if (err) {
+        console.error('Error al insertar datos:', err);
+        return res.status(500).send('Error del servidor');
+      }
+      res.send('Pedido recibido y guardado correctamente.');
+    }
+  );
+});
+
 
 // Inicia el servidor en el puerto definido
 app.listen(port, () => {
   console.log(`Servidor corriendo en http://localhost:${port}`); // Mensaje en consola indicando que el servidor está activo
 });
+
+

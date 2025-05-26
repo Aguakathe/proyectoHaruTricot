@@ -23,9 +23,10 @@
     <title>Haru Tricot</title>
 
 </head>
+
 <body>
-     <!-- Header -->
-     <header class="header">
+    <!-- Header -->
+    <header class="header">
         <!-- Logo Haru -->
         <div class="logo-contenedor">
             <img src="/imgHaruT/logoHaruCuadrado.png" alt="Logo Haru Tricot">
@@ -73,46 +74,52 @@
         <p class="p">¿Tienes dudas o quieres más información? 💌</p>
         <p class="p">Escríbenos aquí y te responderemos lo antes posible.</p>
         <p class="p">📢 Si deseas hacer un pedido, visita la sección "Realiza tu compra" para conocer el proceso.</p>
-      </div>
+    </div>
 
-     <!-- Titulo Formulario -->
-     <h2 class="section-title">Formulario de Contacto</h2>
+    <!-- Titulo Formulario -->
+    <h2 class="section-title">Formulario de Contacto</h2>
 
     <!-- Formulario -->
     <div class="contenedor-formulario">
-    <form class="formulario">
-        <div class="grupo">
-          <div class="campo">
-            <label>Nombre</label>
-            <input type="text" placeholder="Nombre">
-          </div>
-          <div class="campo">
-            <label>Apellido</label>
-            <input type="text" placeholder="Apellido">
-          </div>
-          <div class="campo">
-            <label>Número de contacto</label>
-            <input type="text" placeholder="WhatsApp preferiblemente">
-          </div>
-        </div>
-    
-        <div class="campo ancho">
-          <label>Correo Electrónico</label>
-          <input type="email" placeholder="Correo">
-        </div>
-    
-        <div class="campo ancho">
-          <label>Cuéntanos en qué podemos ayudarte</label>
-          <textarea placeholder="Describe los colores que te gustarían..."></textarea>
-        </div>
-    
-        <div class="check">
-          <input type="checkbox" id="politica">
-          <p class="poli">Política de tratamiento de datos</p>
-        </div>
-    
-        <button type="submit">Enviar Mensaje</button>
-      </form>
+        <form class="formulario" id="formAyuda" novalidate>
+            <div class="grupo">
+                <div class="campo">
+                    <label>Nombre</label>
+                    <input type="text" id="nombre" placeholder="Nombre" required>
+                    <span class="error" id="errorNombre"></span>
+                </div>
+                <div class="campo">
+                    <label>Apellido</label>
+                    <input type="text" id="apellido" placeholder="Apellido" required>
+                    <span class="error" id="errorApellido"></span>
+                </div>
+                <div class="campo">
+                    <label>Número de contacto</label>
+                    <input type="text" id="contacto" placeholder="WhatsApp preferiblemente" inputmode="numeric">
+                    <span class="error" id="errorContacto"></span>
+                </div>
+            </div>
+
+            <div class="campo ancho">
+                <label>Correo Electrónico</label>
+                <input type="email" id="correo" placeholder="Correo" required>
+                <span class="error" id="errorCorreo"></span>
+            </div>
+
+            <div class="campo ancho">
+                <label>Cuéntanos en qué podemos ayudarte</label>
+                <textarea id="mensaje" placeholder="Describe los colores que te gustarían..." required></textarea>
+                <span class="error" id="errorMensaje"></span>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" id="politica">
+                <p class="poli">Política de tratamiento de datos</p>
+                <span class="error" id="errorPolitica"></span>
+            </div>
+
+            <button type="submit">Enviar Mensaje</button>
+        </form>
     </div>
 
 
@@ -159,6 +166,8 @@
         </div>
     </footer>
     <script src="/front-end/scriptsP/scripts.js"></script>
-    
+    <script src="/front-end/scriptsP/scriptC.js"></script>
+
 </body>
+
 </html>

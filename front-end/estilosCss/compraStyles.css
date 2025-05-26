@@ -203,6 +203,12 @@
     border: 2px solid #ba91c8; /* Color lila, puedes cambiarlo */
   }
 
+  .error {
+      color: red;
+      font-size: 0.9em;
+      margin-top: 0.25rem;
+    }
+
 
   @media (max-width: 768px) {
     .title-compra {

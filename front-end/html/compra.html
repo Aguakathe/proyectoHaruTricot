@@ -99,8 +99,7 @@
             </div>
 
             <div class="contenedor-imagen">
-                <img src="/imgHaruT/capibaraPochita.jpg"
-                    alt="Producto de Capibara como Pochita tejido a mano">
+                <img src="/imgHaruT/capibaraPochita.jpg" alt="Producto de Capibara como Pochita tejido a mano">
             </div>
         </div>
     </section>
@@ -129,73 +128,88 @@
     <!-- Titulo Formulario -->
     <h2 class="section-title">Formulario de Pedido</h2>
 
-    <!--Formulario-->
-   <!-- Contenedor para centrar el formulario -->
-<div class="contenedor-formulario">
-    <form class="formulario">
-      <!-- Grupo de campos para nombre, apellido y número de contacto -->
-      <div class="grupo-input">
-        <div>
-          <label>Nombre</label>
-          <input type="text" placeholder="Nombre" />
-        </div>
-        <div>
-          <label>Apellido</label>
-          <input type="text" placeholder="Apellido" />
-        </div>
-        <div>
-          <label>Número de contacto</label>
-          <input type="text" placeholder="WhatsApp preferiblemente" />
-        </div>
-      </div>
-  
-      <!-- Grupo de campos para pedido, pago y entrega -->
-      <div class="grupo-input">
-        <div>
-          <label>¿Qué deseas pedir?</label>
-          <select>
-            <option>Modelo disponible</option>
-            <option>Pedido Personalizado</option>
-          </select>
-        </div>
-        <div>
-          <label>Método de pago</label>
-          <select>
-            <option>Nequi</option>
-            <option>Transferencia Bancaria</option>
-          </select>
-        </div>
-        <div>
-          <label>Método de Entrega</label>
-          <select>
-            <option>Contra entrega (Solo Bogotá)</option>
-            <option>Interrapidismo</option>
-          </select>
-        </div>
-      </div>
-  
-      <!-- Campo para colores -->
-      <label>Colores deseados:</label>
-      <input class="borde" type="text" placeholder="Describe los colores que te gustarían" />
-  
-      <!-- Campo para ideas personalizadas -->
-      <label>Si es personalizado, describe tu idea:</label>
-      <input class="borde" type="text" placeholder="Tu idea aquí" />
-  
-      <!-- Comentarios adicionales -->
-      <label>Comentarios Adicionales:</label>
-      <input class="borde" type="text" placeholder="Comentarios" />
-  
-      <!-- Checkbox para aceptar política -->
-      <div class="politica">
-        <input type="checkbox" />
-        <p>Política de tratamiento de datos</p>
-      </div>
-  
-      <!-- Botón de envío -->
-      <button type="submit">Enviar Pedido</button>
-    </form>
-  </div>
+    <!-- Formulario -->
+    <div class="contenedor-formulario">
+        <form id="formPedido" class="formulario">
+            <!-- Nombre, apellido, número -->
+            <div class="grupo-input">
+                <div>
+                    <label>Nombre</label>
+                    <input type="text" id="nombre" placeholder="Nombre" required />
+                    <span class="error" id="errorNombre"></span>
+                </div>
+                <div>
+                    <label>Apellido</label>
+                    <input type="text" id="apellido" placeholder="Apellido" />
+                    <span class="error" id="errorApellido"></span>
+                </div>
+                <div>
+                    <label>Número de contacto</label>
+                    <input type="text" id="contacto" placeholder="WhatsApp preferiblemente" required />
+                    <span class="error" id="errorContacto"></span>
+                </div>
+            </div>
+
+            <!-- Pedido, pago, entrega -->
+            <div class="grupo-input">
+                <div>
+                    <label>¿Qué deseas pedir?</label>
+                    <select id="pedido" required>
+                        <option value="">Selecciona una opción</option>
+                        <option>Modelo disponible</option>
+                        <option>Pedido Personalizado</option>
+                    </select>
+                    <span class="error" id="errorPedido"></S>
+                </div>
+                <div>
+                    <label>Método de pago</label>
+                    <select id="pago" required>
+                        <option value="">Selecciona un método</option>
+                        <option>Nequi</option>
+                        <option>Transferencia Bancaria</option>
+                    </select>
+                    <span class="error" id="errorPago"></span>
+                </div>
+                <div>
+                    <label>Método de Entrega</label>
+                    <select id="entrega" required>
+                        <option value="">Selecciona una opción</option>
+                        <option>Contra entrega (Solo Bogotá)</option>
+                        <option>Interrapidismo</option>
+                    </select>
+                    <span class="error" id="errorEntrega"></S>
+                </div>
+            </div>
+
+
+            <!-- Colores -->
+            <label>Colores deseados:</label>
+            <input class="borde" type="text" id="colores" placeholder="Describe los colores que te gustarían" required />
+            <span class="error" id="errorColores"></span>
+
+            <!-- Idea personalizada -->
+            <label>Si es personalizado, describe tu idea:</label>
+            <input class="borde" type="text" id="idea" placeholder="Tu idea aquí" required />
+            <span class="error" id="errorIdea"></span>
+            
+
+            <!-- Comentarios -->
+            <label>Comentarios Adicionales:</label>
+            <input class="borde" type="text" id="comentarios" placeholder="Comentarios" />
+            <span class="error" id="errorComentarios"></span>
+
+            <!-- Política -->
+            <div class="politica">
+                <input type="checkbox" id="politica" required />
+                <label for="politica">Política de tratamiento de datos</label>
+                <span class="error" id="errorPolitica"></span>
+            </div>
+
+            <!-- Enviar -->
+            <button type="submit">Enviar Pedido</button>
+        </form>
+    </div>
+
 
 
 
@@ -247,6 +261,7 @@
     </footer>
 
     <script src="/front-end/scriptsP/scripts.js"></script>
+    <script src ="/front-end/scriptsP/scriptCompra.js"></script>
 </body>
 
 </html>

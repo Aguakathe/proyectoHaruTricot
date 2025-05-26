@@ -181,7 +181,7 @@ const productos = [
     size: "12 cm aprox",
     description: "Se puede hacer en diferente color",
     image: "/imgHaruT/bebeBuho.jpg"
-  }
+  },
 ];
 
 //Funciones
@@ -194,7 +194,7 @@ productos.forEach(p => {
   card.innerHTML = `
     <div class="card-inner">
       <div class="card-front">
-        <img src="${p.image}" alt="${p.name}">
+        <img src="${p.image}" alt="${p.name}" loading="lazy">
       </div>
       <div class="card-back">
         <h3>${p.name}</h3>
