@@ -96,4 +96,7 @@ app.listen(port, () => {
   console.log(`Servidor corriendo en http://localhost:${port}`); // Mensaje en consola indicando que el servidor está activo
 });
 
+app.get("/prueba", (req, res) => {
+  res.send("Servidor funcionando correctamente 🎉");
+});
 
