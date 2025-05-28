@@ -36,6 +36,7 @@ function validarApellido() {
     return true;
 }
 document.getElementById("contacto").addEventListener("focus", () => {
+    validarNombre();
     validarApellido();  // Forzamos la validación del apellido al entrar al campo contacto
 });
 

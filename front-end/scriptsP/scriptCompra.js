@@ -28,7 +28,9 @@ function validarNombre() {
 
 document.getElementById("contacto").addEventListener("focus", () => {
     validarNombre();  // Forzamos la validación del apellido al entrar al campo contacto
+    validarApellido();  // Forzamos la validación del apellido al entrar al campo contacto
 });
+
 
 function validarApellido() {
     const valor = document.getElementById("apellido").value.trim();
@@ -92,7 +94,7 @@ document.getElementById("idea").addEventListener("focus", () => {
 });
 
 function validarPolitica() {
-    const check = document.getElementById("politica").checked;
+    const check = document.getElementById("poli").checked;
     if (!check) {
         mostrarError("errorPolitica", "Debes aceptar la política de tratamiento de datos.");
         return false;
@@ -101,7 +103,7 @@ function validarPolitica() {
     return true;
 }
 
-document.getElementById("politica").addEventListener("focus", () => {
+document.getElementById("poli").addEventListener("focus", () => {
     validarIdea();  // Forzamos la validación del apellido al entrar al campo contacto
 });
 
@@ -129,7 +131,7 @@ document.getElementById("pago").addEventListener("change", () => validarSelect("
 document.getElementById("entrega").addEventListener("change", () => validarSelect("entrega", "errorEntrega", ""));
 document.getElementById("colores").addEventListener("input", validarColores);
 document.getElementById("idea").addEventListener("input", validarIdea);
-document.getElementById("politica").addEventListener("change", validarPolitica);
+document.getElementById("poli").addEventListener("change", validarPolitica);
 
 
 
@@ -149,7 +151,7 @@ document.getElementById("formPedido").addEventListener("submit", function (e) {
     const colores_deseados = document.getElementById("colores").value.trim();
     const idea_personalizada = document.getElementById("idea").value.trim();
     const comentarios = document.getElementById("comentarios").value.trim();
-    const acepta_politica = document.getElementById("politica").checked;
+    const acepta_politica = document.getElementById("poli").checked;
 
     fetch("http://localhost:3000/compra", {
         method: "POST",
