@@ -188,10 +188,11 @@ const productos = [
 const container = document.getElementById("productContainer");
 
 productos.forEach(p => {
-  const card = document.createElement("div");
+  const card = document.createElement("div"); //Se crea un nuevo elemento 
   card.className = "card";
 
-  card.innerHTML = `
+  //se define el contenido visual del elemento 
+  card.innerHTML = ` 
     <div class="card-inner">
       <div class="card-front">
         <img src="${p.image}" alt="${p.name}" loading="lazy">
@@ -206,5 +207,8 @@ productos.forEach(p => {
     </div>
   `;
 
+  //Inserta la tarjeta card dentro del contenedor, para que se muestre en la página.
   container.appendChild(card);
+  //Toma un nodo y lo inserta al final de otro. 
+  //Está insertando cada tarjeta (card) dentro del contenedor con id="productContainer".
 });
