@@ -15,6 +15,10 @@ function contarPalabras(texto) {
     return texto.trim().split(/\s+/).filter(p => p.length > 0).length;
 }
 
+//split divide el texto en un arreglo de palabras
+//filter elimina cualquier elemento vacio del arreglo
+//length devuelve el número de palabras
+
 // Validaciones individuales
 function validarNombre() {
     const nombre = document.getElementById("nombre").value.trim();
@@ -108,7 +112,7 @@ function validarFormulario() {
 }
 
 document.getElementById("formAyuda").addEventListener("submit", function (e) {
-    e.preventDefault();
+    e.preventDefault(); //evita el comportamiento por defecto (recargar la página o enviar datos al servidor BD)
 
     const valido = validarFormulario();
     if (!valido) return;
@@ -150,6 +154,7 @@ document.getElementById("formAyuda").addEventListener("submit", function (e) {
 
 // Validación en vivo campo por campo
 document.getElementById("nombre").addEventListener("input", validarNombre);
+// Cada que el usuario escribe algo en el campo nombre, se ejecuta la función validar Nombre en ese momento.
 document.getElementById("apellido").addEventListener("input", validarApellido);
 document.getElementById("contacto").addEventListener("input", validarContacto);
 document.getElementById("correo").addEventListener("input", validarCorreo);
